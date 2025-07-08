@@ -18,8 +18,8 @@ engine.setProperty('rate', 150)
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[-2].id)
 
-genai.configure(api_key="AIzaSyDcHZRhUEqS-Ao65a695W0mox1Kl1mozCQ")
-model = genai.GenerativeModel("gemini-1.5-flash")
+genai.configure(api_key="API KEY")
+model = genai.GenerativeModel("MODEL")
 
 def speak(text):
     engine.say(text)
@@ -50,13 +50,13 @@ def respond(command):
     elif "what is time" in command:
         return datetime.datetime.now().strftime("It's %I:%M %p now.")
     elif "play song" in command:
-        pywhatkit.playonyt("one of the girl tonight by the weeknd")
+        pywhatkit.playonyt("SONG NAME")
         return "Playing song."
     elif "i want to download movie" in command:
         webbrowser.open("http://www.9xflix.me")
         return "Sir, now you can download your favorite movie."
     elif "play movie" in command:
-        webbrowser.open("https://youtu.be/uoGCXFuDiQo?si=JIeJiy67MPgzlzkc")
+        webbrowser.open("MOVIE LINK")
         return "Playing movie."
     elif "open google" in command:
         webbrowser.open("https://www.google.com")
